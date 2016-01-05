@@ -119,8 +119,8 @@ FileETag None
   RewriteCond %{ENV:REDIRECT_STATUS} 200
   RewriteRule .* - [L]
 
-  #change arc.lib.montana.edu/opsis/item.html?id=5 to arc.lib.montana.edu/opsis/item/5
-  RewriteBase /book/opsis/
+  #change arc.lib.montana.edu/intermountain-journal-science/item.html?id=5 to arc.lib.montana.edu/intermountain-journal-science/item/5
+  RewriteBase /book/intermountain-journal-science/
   RewriteRule item/([-_a-zA-Z0-9]+) item.html?id=$1 [L,QSA]
 
   #remove need to have .html extension in filename
