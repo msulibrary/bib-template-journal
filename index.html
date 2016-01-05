@@ -68,10 +68,11 @@ if ($_SERVER['HTTP_HOST'] == "ADD-YOUR-DOMAIN-HERE") {
 <nav epub:type="landmarks">
 <ul>
   <li><a epub:type="toc" href="<?php echo $path; ?>/table-of-contents.html">Table of Contents</a></li>
-  <form class="search" role="search" action="<?php echo $path; ?>/search?">
-    <label class="hidden" for="q">Search</label>
-    <input id="q" name="q" type="search" placeholder="Search">
-  </form>
+  <li>
+	<form class="search" role="search" action="<?php echo $path; ?>/search?">
+	<label class="hidden" for="q">Search</label>
+	<input id="q" name="q" type="search" placeholder="Search">
+	</form>
   </li>
 </ul>
 </nav>
