@@ -27,7 +27,7 @@ include_once './meta/assets/dbconnect.inc';
 if ($type == 'search') {
 	$query = "
 		SELECT *
-		FROM schema_fiction.bodymatter
+		FROM schema_journal.bodymatter
 		WHERE MATCH (name, creator, additionalType, additionalType2, text)
 		AGAINST ('$q*' IN BOOLEAN MODE)
 		GROUP BY id
@@ -37,13 +37,13 @@ if ($type == 'search') {
 } elseif ($type == 'item') {
 	$query = "
 		SELECT *
-		FROM schema_fiction.bodymatter
+		FROM schema_journal.bodymatter
 		WHERE id = $id
 	";
 } elseif (!is_null($date)) {
 	$query = "
 		SELECT *
-		FROM schema_fiction.bodymatter
+		FROM schema_journal.bodymatter
 		WHERE datePublished = '$date'
 		GROUP BY id
 		ORDER BY id
@@ -52,7 +52,7 @@ if ($type == 'search') {
 } else {
 	$query = "
 		SELECT *
-		FROM schema_fiction.bodymatter
+		FROM schema_journal.bodymatter
 		WHERE id = $id
 	";
 }
